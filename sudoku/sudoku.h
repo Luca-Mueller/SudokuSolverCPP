@@ -1,5 +1,5 @@
-#ifndef SUDOKU
-#define SUDOKU
+#ifndef SUDOKU_H
+#define SUDOKU_H
 
 #include <string>
 #include <utility>
@@ -10,7 +10,7 @@ using Grid = std::map<std::pair<size_t, size_t>, size_t>;
 struct Sudoku
 {
     Grid grid;                      // 9 x 9 sudoku grid
-    size_t nRecursiveCalls;         // calls to 'solve()'
+    size_t nRecursiveCalls = 0;     // calls to 'solve()'
 
     enum
     {   DIM = 9,
